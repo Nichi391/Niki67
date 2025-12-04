@@ -1,0 +1,42 @@
+string potato = "Potato";
+long temperature = int.Parse(Console.ReadLine());
+string state = "";
+
+if (temperature <= 0)
+{
+    state = "Frozen ";
+}
+else if (temperature <= 30)
+{
+    state = "Normal ";
+}
+else if (temperature <= 45)
+{
+    state = "Warm ";
+}
+else if (temperature <= 70)
+{
+    state = "Hot ";
+}
+else if (temperature > 70 && temperature <= 100)
+{
+    state = "Really Hot ";
+}
+else if (temperature <= 130)
+{
+    state = "Boiling ";
+}
+else if (temperature <= 200)
+{
+    state = "Fiery ";
+}
+else if (temperature <= 500)
+{
+    state = "Scorching ";
+}
+else
+{
+    state = "Hellfire ";
+}
+
+Console.WriteLine(state + potato);
