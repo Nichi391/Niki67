@@ -1,0 +1,100 @@
+int x = int.Parse(Console.ReadLine());
+int y = int.Parse(Console.ReadLine());
+string operation = Console.ReadLine();
+double result = 0;
+string type = "";
+
+if (operation == "+")
+{
+    result = x + y;
+
+    if (result % 2 == 0)
+    {
+        type = "even";
+    }
+    else
+    {
+        type = "odd";
+    }
+
+    Console.WriteLine(x + "+" + y + "=" + result + "-" + type);
+}
+else if (operation == "-")
+{
+    result = x - y;
+
+    if (result % 2 == 0)
+    {
+        type = "even";
+    }
+    else
+    {
+        type = "odd";
+    }
+
+    Console.WriteLine(x + "-" + y + "=" + result + "-" + type);
+}
+else if (operation == "*")
+{
+    result = x * y;
+
+    
+
+    if (result % 2 == 0)
+    {
+        type = "even";
+    }
+    else
+    {
+        type = "odd";
+    }
+
+    Console.WriteLine(x + "*" + y + "=" + result + "-" + type);
+}
+else if (operation == "/")
+{
+    if (y == 0)
+    {
+        Console.WriteLine("Cannot divide " + x + " by zero.");
+    }
+    else
+    {
+        result = x / y;
+
+        if (result % 2 == 0)
+        {
+            type = "even";
+        }
+        else
+        {
+            type = "odd";
+
+        }
+
+        Console.WriteLine(x + "%" + y + "=" + result + "-" + type);
+    }
+}
+
+
+else if (operation == "%")
+{
+    if (y == 0)
+    {
+        Console.WriteLine("Cannot divide " + x + " by zero.");
+    }
+    else
+    {
+        result = x % y;
+
+        if (result % 2 == 0)
+        {
+            type = "even";
+        }
+        else
+        {
+            type = "odd";
+        }
+
+        Console.WriteLine(x + "%" + y + "=" + result + "-" + type);
+    }
+}
