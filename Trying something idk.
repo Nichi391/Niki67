@@ -1,0 +1,30 @@
+int number = int.Parse(Console.ReadLine());
+
+if (number > 0)
+{
+    if (number % 2 == 0)
+    {
+        Console.WriteLine("Положително четно");
+    }
+    else
+    {
+        Console.WriteLine("Положително нечетно");
+    }
+
+}
+else if (number < 0)
+{
+    if (number % 2 == 0)
+    {
+        Console.WriteLine("Отрицателно четно");
+    }
+    else
+    {
+        Console.WriteLine("Отрицателно нечетно");
+    }
+
+}
+else 
+{
+    Console.WriteLine("Нула");
+}
