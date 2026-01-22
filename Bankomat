@@ -1,0 +1,40 @@
+double balance = double.Parse(Console.ReadLine());
+int operation_count = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= operation_count; i++)
+{
+    int operation = int.Parse(Console.ReadLine());
+
+    if (operation == 1)
+    {
+        Console.WriteLine("Your balance : " + balance);
+    }
+    else if (operation == 2)
+    {
+        double take = double.Parse(Console.ReadLine());
+
+        if (take <= balance)
+        {
+            Console.WriteLine("Money took succesfully, your balance : " + (balance -= take));
+        }
+        else
+        {
+            Console.WriteLine("Unable to take the wanted money, your balance : " + balance);
+        }
+
+    }
+    else if (operation == 3)
+    {
+        double give = double.Parse(Console.ReadLine());
+
+        if (give > 0)
+        {
+            Console.WriteLine("Money added succesfully, your balance : " + (balance += give));
+        }
+        else
+        {
+            Console.WriteLine("Unable to add the wanted money, your balance : " + balance);
+        }
+
+    }
+}
