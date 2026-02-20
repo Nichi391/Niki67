@@ -1,0 +1,21 @@
+int roomWidth = int.Parse(Console.ReadLine());
+int roomLenght = int.Parse(Console.ReadLine());
+int roomHeight = int.Parse(Console.ReadLine());
+int room = roomLenght * roomWidth * roomHeight;
+string input = Console.ReadLine();
+
+while (input != "Done")
+{
+    int box = int.Parse(input);
+    room -= box;
+
+    if (room < 0)
+    {
+        Console.WriteLine($"No more free space! You need {Math.Abs(room)} Cubic meters more.");
+        return;
+    }
+
+    input = Console.ReadLine();
+}
+
+Console.WriteLine($"{room} Cubic meters left.");
