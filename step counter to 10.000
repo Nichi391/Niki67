@@ -1,0 +1,23 @@
+int stepGoal = 10000;
+int stepsCount = 0;
+
+while (stepsCount <= stepGoal)
+{ 
+    string action = Console.ReadLine();
+
+    if (action == "Going home")
+    {
+        int stepstoHome = int.Parse(Console.ReadLine());
+        stepsCount += stepstoHome;
+
+        if(stepsCount != stepGoal)
+        {
+            Console.WriteLine($"{stepGoal - stepsCount} more steps to reach goal.");
+            return;
+        }
+    }
+
+    int steps = int.Parse(action);
+    stepsCount += steps;
+}
+Console.WriteLine($"Goal reached! Good job!\n{stepsCount - stepGoal} steps over the goal!");
