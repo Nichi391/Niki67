@@ -1,0 +1,39 @@
+double moneyNeeded = double.Parse(Console.ReadLine());
+double myMoney = double.Parse(Console.ReadLine());
+int spendcounter = 0;
+int daycounter = 0;
+
+while (myMoney < moneyNeeded && spendcounter < 3)
+{
+
+    string choice = Console.ReadLine();
+    double amount = double.Parse(Console.ReadLine());
+
+    daycounter++;
+
+    if (choice == "spend")
+    {
+        myMoney -= amount;
+        spendcounter++;
+
+
+        if (myMoney < 0)
+        {
+            myMoney = 0;
+        }
+    }
+    if (choice == "save")
+    {
+        myMoney += amount;
+
+    }
+}
+
+if (spendcounter == 3)
+{
+    Console.WriteLine($"You can't buy the phone\n{daycounter}.");
+}
+if (myMoney >= moneyNeeded)
+{
+    Console.WriteLine($"You bought the phone for {daycounter} days.");
+}
